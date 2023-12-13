@@ -33,7 +33,7 @@ public class ProductDaoImpl implements ProductDao {
 
         if (productQueryParams.getCategory() != null) {
             sql = sql + " AND category = :category";
-            map.put("category", productQueryParams.getCategory());
+            map.put("category", productQueryParams.getCategory().name());
         }
 
         if (productQueryParams.getSearch() != null) {
